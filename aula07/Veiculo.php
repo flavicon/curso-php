@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 class Veiculo
 {
-  private readonly string $chassi; //readonly é apenas php8.1
+  //private readonly string $chassi; //readonly é apenas php8.1
   private string $modelo;
   private string $marca;
   private ?string $placa;
@@ -13,9 +13,9 @@ class Veiculo
 
   public function __construct(string $chassi, string $marca, string $modelo)
   {
-      $this->chassi = $chassi;
-      $this->marca = $marca;
-      $this->modelo = $modelo;
+    $this->chassi = $chassi;
+    $this->marca = $marca;
+    $this->modelo = $modelo;
   }
 
   public function getMarca(): string //acesso

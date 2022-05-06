@@ -5,7 +5,7 @@ declare(strict_types=1);
 class Cliente
 {
   private string $nome;
-  private readonly string $cpf;
+  // private readonly string $cpf;
   private ?string $endereco;
   private Veiculo $veiculo;
 

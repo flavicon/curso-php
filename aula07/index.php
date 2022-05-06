@@ -21,7 +21,5 @@ $optimusPrime->setCapacidade(900);
 
 echo "Me chamo ".$cliente->getNome().PHP_EOL;
 echo "Meu carro é um ".$carro->getModelo()." e tem km = ".$carro->getKm().PHP_EOL;
-
 echo "Da cor ". $carro->getCor().PHP_EOL.PHP_EOL;
-
 echo "Meu caminhão é ".$optimusPrime->getModelo();
