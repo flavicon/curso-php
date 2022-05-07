@@ -2,16 +2,17 @@
 
 ini_set('display_errors', 1);
 
-include '../src/controller/AbstractController.php';
-include '../src/controller/CategoryController.php';
-include '../src/controller/ErrorController.php';
-include '../src/controller/IndexController.php';
+include '../vendor/autoload.php';
+
+use App\Controller\CategoryController;
+use App\Controller\ErrorController;
+use App\Controller\IndexController;
 
 $url = $_SERVER['REQUEST_URI'];
 
 match($url) {
+    '/' => (new IndexController)->home(),
     '/listar' => (new CategoryController())->list(),
     '/novo' => (new CategoryController())->add(),
-    '/' => (new IndexController)->home(),
     default => (new ErrorController())->notFound(),
 };
